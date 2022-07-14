@@ -1,13 +1,12 @@
+import iconArrowDown from 'assets/images/icon-arrowDown.svg';
+import iconTrash from 'assets/images/icon-trash.svg';
 import { Item, TodoAddProps } from 'modules/types';
 import { memo, useCallback } from 'react';
 
 import Button from './Button';
+import List from './List';
 import classes from './TodoAdd.module.css';
 import TodoItem from './TodoItem';
-import List from './List'
-
-import iconTrash from 'assets/images/icon-trash.svg'
-import iconArrowDown from 'assets/images/icon-arrowDown.svg'
 
 const TodoAdd = memo((props: TodoAddProps) => {
   const { items, setItems, itemsDone, setItemsDone } = props;
@@ -30,7 +29,9 @@ const TodoAdd = memo((props: TodoAddProps) => {
       return (
         <>
           <div className={classes.todoLength_alert}>
-            <div className={`${classes.todoLength_progress} ${classes.todoLength_divider} fadeScaleUp`}>
+            <div
+              className={`${classes.todoLength_progress} ${classes.todoLength_divider} fadeScaleUp`}
+            >
               <span className={classes.done}>{items.length - newItemsDone.length}</span>
               <span className={classes.all}>{items.length}</span>
             </div>
@@ -74,8 +75,15 @@ const TodoAdd = memo((props: TodoAddProps) => {
         </List>
       </div>
       <div className={classes.blockBottom}>
-        <Button onClick={onClickDelete} icon={iconArrowDown} alt="下矢印アイコン">完了済みを削除</Button>
-        <Button onClick={onClickAllClear} icon={iconTrash} style="button_clear" alt="ごみ箱アイコン">
+        <Button onClick={onClickDelete} icon={iconArrowDown} alt="下矢印アイコン">
+          完了済みを削除
+        </Button>
+        <Button
+          onClick={onClickAllClear}
+          icon={iconTrash}
+          style="button_clear"
+          alt="ごみ箱アイコン"
+        >
           TODOリストを削除
         </Button>
       </div>

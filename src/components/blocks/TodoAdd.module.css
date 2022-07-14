@@ -6,7 +6,7 @@
   --size-icon-todoLength: 60px;
   display: flex;
   height: var(--size-icon-todoLength);
-  line-height: var(--size-icon-todoLength)
+  line-height: var(--size-icon-todoLength);
 }
 
 .todoLength_progress {
