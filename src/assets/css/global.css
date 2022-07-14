@@ -1,0 +1,133 @@
+:root {
+  --color-base-gray-50: #eceff1;
+  --color-base-gray-300: #90a4ae;
+  --color-base-gray-500: #607d8b;
+  --color-base-gray-700: #455a64;
+  --color-base-cyan-50: #e0f7fa;
+  --color-base-cyan-100: #b2ebf2;
+  --color-base-cyan-300: #4dd0e1;
+  --color-base-cyan-500: #00bcd4;
+  --color-base-cyan-600: #00acc1;
+  --color-base-cyan-700: #0097a7;
+  --color-base-cyan-800: #00838f;
+  --color-base-cyan-900: #006064;
+  --color-base-white: #ffffff;
+  --color-base-pink-50: #f7e5f2;
+  --color-base-pink-200: #dd94cb;
+  --color-base-pink-300: #ce68b6;
+  --color-font-base: #607d8b;
+  --color-font-secondary: #00bcd4;
+  --color-font-tertiary: #eceff1;
+  --size-font-small: 0.75rem; /* the small size of the font */
+  --size-font-medium: 1rem; /* the medium size of the font */
+  --size-font-large: 2.5rem; /* the large size of the font */
+  --size-font-base: 1rem; /* the base size of the font */
+  --radius-base: 6px;
+  --radius-round: 100vmax;
+  --box-shadow-active: 1px 3px 12px 9px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  color: var(--color-base-gray-700);
+  font-size: var(--size-font-base);
+  letter-spacing: 0.05rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type='button'],
+input[type='text'],
+input[type='submit'],
+input[type='image'],
+textarea {
+  outline: none;
+}
+
+.block {
+  padding: 2rem 3rem;
+}
+
+.list {
+  margin: 1rem 0;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.fadeScaleUp {
+  opacity: 0;
+  animation: fadeScaleUp 1s ease;
+  animation-fill-mode: forwards;
+}
+
+.fadeInUp {
+  animation: fadeInUp .6s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.fadeInScaleUp {
+  animation: fadeInScaleUp 0.6s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeScaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

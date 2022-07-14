@@ -1,0 +1,29 @@
+.buttonBase {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem 0.8rem 2.8rem;
+  position: relative;
+  color: var(--color-base-white);
+  font-weight: 700;
+  background: var(--color-base-pink-300);
+  border: none;
+  border-radius: var(--radius-round);
+}
+
+.buttonBase:hover {
+  cursor: pointer;
+  background: var(--color-base-pink-200);
+}
+
+.buttonBase_clear {
+  color: var(--color-base-pink-300);
+  background: var(--color-base-white);
+  border: 2px solid var(--color-base-pink-300);
+}
+
+.buttonBase_icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+}

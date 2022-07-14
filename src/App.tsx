@@ -1,4 +1,4 @@
-import 'assets/css/style.css';
+import 'assets/css/global.css';
 
 import Todo from 'components/pages/Todo';
 

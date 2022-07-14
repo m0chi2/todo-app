@@ -1,0 +1,31 @@
+.todoInput_block {
+  padding: 2rem 3rem 1rem;
+  background: var(--color-base-gray-50);
+  border-top-left-radius: var(--radius-base);
+  border-top-right-radius: var(--radius-base);
+}
+.todoInput {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius-round);
+  transition: all 0.3s ease-out;
+  color: var(--color-base-gray-500);
+  font-weight: 700;
+}
+
+.todoInput::placeholder {
+  font-weight: 500;
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.todoInput:focus {
+  box-shadow: var(--box-shadow-active);
+}
+
+.todoInput:focus::placeholder {
+  opacity: 0;
+}

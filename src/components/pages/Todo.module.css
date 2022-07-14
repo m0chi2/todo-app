@@ -1,8 +1,46 @@
 .container {
+  width: 100%;
+  padding: 3% 0;
 }
-.inner {
-}
+
 .main {
+  width: 70%;
+  max-width: 700px;
+  margin: auto;
+  position: relative;
 }
-.heading {
+
+.todoTitleBlock {
+  display: flex;
+  width: 500px;
+  margin: auto;
+}
+
+.todoTitle {
+  padding: 6% 0;
+  text-align: center;
+}
+
+.todoHeading {
+  color: var(--color-base-cyan-50);
+  font-size: var(--size-font-large);
+}
+
+.todoText {
+  color: var(--color-base-cyan-50);
+  font-weight: 700;
+}
+
+.todoKv {
+  margin: auto;
+  grid-row: 1/3;
+  grid-column: 2/3;
+}
+
+.todoCard_block > div:first-child {
+  animation-delay: 1s;
+}
+
+.todoCard_block > div:nth-child(2) {
+  animation-delay: 1.4s;
 }

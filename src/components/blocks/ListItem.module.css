@@ -1,0 +1,34 @@
+.listItem_block {
+  display: block;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: var(--color-base-gray-50);
+  border-radius: var(--radius-base);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.listItem_block:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow-active);
+  transform: scale(1.05);
+}
+
+.listItem_icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: 0;
+}
+
+.listItem_icon::after {
+  content: '';
+  display: block;
+  width: 4px;
+}
+
+.listItem_label {
+  padding-left: 0.5rem;
+}

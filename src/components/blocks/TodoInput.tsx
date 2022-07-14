@@ -17,11 +17,11 @@ const TodoInput = memo((props: TodoInputProps) => {
     setText('');
   };
   return (
-    <div className={classes.block}>
+    <div className={`block ${classes.todoInput_block}`}>
       <input
-        className={classes.input}
+        className={classes.todoInput}
         type="text"
-        placeholder="Enterで入力する"
+        placeholder="タスクを入力してEnterを押してね"
         value={text}
         onChange={handleChange}
         onKeyDown={handleKeyDown}

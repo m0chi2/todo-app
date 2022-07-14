@@ -1,0 +1,7 @@
+.cardBase {
+  background: var(--color-base-white);
+  border-radius: var(--radius-base);
+  box-shadow: 0 4px 12px var(--color-base-cyan-700), 0 8px 40px var(--color-base-cyan-800);
+  margin: 1rem auto;
+  opacity: 0;
+}

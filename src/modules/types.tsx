@@ -29,3 +29,25 @@ export type TodoItemProps = {
 export type TodoDonesProps = {
   itemsDone: Array<Item>;
 };
+
+export type CardProps = {
+  children?: React.ReactNode;
+};
+
+export type ButtonProps = {
+  children?: React.ReactNode;
+  style?: string;
+  icon?: string;
+  alt?: string;
+  onClick: () => void;
+};
+
+export type ListProps = {
+  children?: React.ReactNode;
+  style?: string;
+};
+
+export type ListItemProps = {
+  status?: string;
+  label?: string;
+};

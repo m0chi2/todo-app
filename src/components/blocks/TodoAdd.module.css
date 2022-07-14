@@ -1,0 +1,81 @@
+.todoList {
+  animation-delay: 1.5s;
+}
+
+.todoLength_alert {
+  --size-icon-todoLength: 60px;
+  display: flex;
+  height: var(--size-icon-todoLength);
+  line-height: var(--size-icon-todoLength)
+}
+
+.todoLength_progress {
+  margin: 0 0.5rem;
+  width: var(--size-icon-todoLength);
+  height: var(--size-icon-todoLength);
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-base-white);
+  line-height: var(--size-icon-todoLength);
+  background: var(--color-base-cyan-600);
+  border-radius: var(--radius-round);
+  opacity: 0;
+}
+
+.todoLength_progress .done {
+  position: absolute;
+  font-size: 1.2rem;
+  top: -6px;
+  left: 14px;
+}
+
+.todoLength_progress .all {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 6px;
+  right: 14px;
+}
+
+.todoLength_divider::before {
+  content: '';
+  display: block;
+  width: 42%;
+  height: 2px;
+  position: relative;
+  top: 50%;
+  left: 28%;
+  background: var(--color-base-white);
+  transform: rotate(-60deg);
+}
+
+.todoLength_text {
+  margin: 0;
+  padding-left: 0.5rem;
+  color: var(--color-base-cyan-600);
+  font-weight: 700;
+  line-height: var(--size-icon-todoLength);
+  opacity: 0;
+}
+
+.todoLength_alert > div {
+  animation-delay: 1.2s;
+}
+
+.todoLength_alert > p {
+  animation-delay: 1.25s;
+}
+
+.blockBottom {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.blockBottom > button:first-child {
+  animation-delay: 1.6s;
+}
+
+.blockBottom > button:nth-child(2) {
+  animation-delay: 1.7s;
+}
