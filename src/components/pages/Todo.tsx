@@ -1,8 +1,8 @@
 import img_kv from 'assets/images/kv.svg';
-import Card from 'components/blocks/Card';
-import TodoAdd from 'components/blocks/TodoAdd';
-import TodoDones from 'components/blocks/TodoDones';
-import TodoInput from 'components/blocks/TodoInput';
+import { Card } from 'components/blocks/Card';
+import { TodoAdd } from 'components/blocks/TodoAdd';
+import { TodoDones } from 'components/blocks/TodoDones';
+import { TodoInput } from 'components/blocks/TodoInput';
 import { Item } from 'modules/types';
 import { useCallback, useState } from 'react';
 

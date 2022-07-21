@@ -2,7 +2,7 @@ import iconDone from 'assets/images/icon-done.svg';
 import { ListItemProps } from 'modules/types';
 
 import classes from './ListItem.module.css';
-const ListItem = ({ status, label }: ListItemProps) => {
+export const ListItem = ({ status, label }: ListItemProps) => {
   return (
     <li className={`${classes.listItem_block} fadeInUp`}>
       {status === 'done' && (
@@ -12,4 +12,3 @@ const ListItem = ({ status, label }: ListItemProps) => {
     </li>
   );
 };
-export default ListItem;

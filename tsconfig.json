@@ -15,8 +15,9 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "types": ["vite/client", "node", "jest", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src", "jest.setup.ts", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

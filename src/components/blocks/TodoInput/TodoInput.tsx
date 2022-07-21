@@ -3,7 +3,7 @@ import { ChangeEvent, KeyboardEvent, memo, useCallback } from 'react';
 
 import classes from './TodoInput.module.css';
 
-const TodoInput = memo((props: TodoInputProps) => {
+export const TodoInput = memo((props: TodoInputProps) => {
   const { text, setText, typing, setTyping, onAdd } = props;
 
   const handleChange = useCallback(
@@ -19,6 +19,7 @@ const TodoInput = memo((props: TodoInputProps) => {
   return (
     <div className={`block ${classes.todoInput_block}`}>
       <input
+        id="todoInput"
         className={classes.todoInput}
         type="text"
         placeholder="タスクを入力してEnterを押してね"
@@ -32,4 +33,3 @@ const TodoInput = memo((props: TodoInputProps) => {
   );
 });
 TodoInput.displayName = 'TodoInput';
-export default TodoInput;

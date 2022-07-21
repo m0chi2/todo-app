@@ -3,12 +3,12 @@ import iconTrash from 'assets/images/icon-trash.svg';
 import { Item, TodoAddProps } from 'modules/types';
 import { memo, useCallback } from 'react';
 
-import Button from './Button';
-import List from './List';
+import { Button } from '../Button';
+import { List } from '../List';
+import { TodoItem } from '../TodoItem';
 import classes from './TodoAdd.module.css';
-import TodoItem from './TodoItem';
 
-const TodoAdd = memo((props: TodoAddProps) => {
+export const TodoAdd = memo((props: TodoAddProps) => {
   const { items, setItems, itemsDone, setItemsDone } = props;
 
   const onCheckChange = useCallback(
@@ -32,11 +32,18 @@ const TodoAdd = memo((props: TodoAddProps) => {
             <div
               className={`${classes.todoLength_progress} ${classes.todoLength_divider} fadeScaleUp`}
             >
-              <span className={classes.done}>{items.length - newItemsDone.length}</span>
-              <span className={classes.all}>{items.length}</span>
+              <span className={classes.done} data-test="todoLengthDone">
+                {items.length - newItemsDone.length}
+              </span>
+              <span className={classes.all} data-test="todoLengthAll">
+                {items.length}
+              </span>
             </div>
             {items.length > 0 && (
-              <p className={`${classes.todoLength_text} fadeScaleUp`}>
+              <p
+                className={`${classes.todoLength_text} fadeScaleUp`}
+                data-test="todoLengthMessage"
+              >
                 残り{newItemsDone.length}個です！その調子で取り組みましょう
               </p>
             )}
@@ -46,7 +53,12 @@ const TodoAdd = memo((props: TodoAddProps) => {
     return (
       <div className={classes.todoLength_alert}>
         <div className={`${classes.todoLength_progress} fadeScaleUp`}>0</div>
-        <p className={`${classes.todoLength_text} fadeScaleUp`}>タスクがありません</p>
+        <p
+          className={`${classes.todoLength_text} fadeScaleUp`}
+          data-test="todoLengthNothing"
+        >
+          タスクがありません
+        </p>
       </div>
     );
   }, [items]);
@@ -66,7 +78,7 @@ const TodoAdd = memo((props: TodoAddProps) => {
 
   return (
     <div className="block">
-      <div className={classes.blockUpper}>
+      <div className={classes.blockUpper} data-test="blockUpper">
         <div className={classes.todoLength}>{TodoDoneLength()}</div>
         <List style={`${classes.todoList} fadeScaleUp`}>
           {items.map((item) => {
@@ -78,12 +90,7 @@ const TodoAdd = memo((props: TodoAddProps) => {
         <Button onClick={onClickDelete} icon={iconArrowDown} alt="下矢印アイコン">
           完了済みを削除
         </Button>
-        <Button
-          onClick={onClickAllClear}
-          icon={iconTrash}
-          style="button_clear"
-          alt="ごみ箱アイコン"
-        >
+        <Button onClick={onClickAllClear} icon={iconTrash} alt="ごみ箱アイコン">
           TODOリストを削除
         </Button>
       </div>
@@ -92,4 +99,3 @@ const TodoAdd = memo((props: TodoAddProps) => {
 });
 
 TodoAdd.displayName = 'TodoAdd';
-export default TodoAdd;
