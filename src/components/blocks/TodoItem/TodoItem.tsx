@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import classes from './TodoItem.module.css';
 
-const TodoItem = memo((props: TodoItemProps) => {
+export const TodoItem = memo((props: TodoItemProps) => {
   const { item, onCheck } = props;
   const handleChange = () => onCheck(item);
   return (
@@ -31,4 +31,3 @@ const TodoItem = memo((props: TodoItemProps) => {
   );
 });
 TodoItem.displayName = 'TodoItem';
-export default TodoItem;
